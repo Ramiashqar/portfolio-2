@@ -27,10 +27,13 @@ html {
 body {
   width: 100%;
   padding: 2rem;
+  background-color: $color-dark;
+  box-sizing: border-box;
+  color: $color-white;
   @include respond(tab-port) {
     padding: 0;
   }
-  box-sizing: border-box;
+  font-family: $roboto-regular, sans-serif;
 }
 img {
   max-width: 100%;
@@ -38,7 +41,8 @@ img {
 }
 
 ::selection {
-
+  color: $color-white;
+  background-color: rgba($color-primary, 0.16);
 }
 
 //Anchor

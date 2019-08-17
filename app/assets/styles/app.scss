@@ -4,6 +4,7 @@
 /* 
 #ff0000 :: This entire css code is written by node:sass. So to apply maintenance and modifications it's a better practice to do it using the sass folders not the main css file :: #ff0000
 */
+@import "base/typography";
 
 @import "abstract/functions";
 @import "abstract/mixins";
@@ -11,7 +12,6 @@
 
 @import "base/animations";
 @import "base/global";
-// @import "base/typography";
 @import "base/utilities";
 
 @import "layout/footer";

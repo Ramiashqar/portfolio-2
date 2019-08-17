@@ -70,7 +70,7 @@ module.exports = env => {
           ]
         },
         {
-          test: /\.(ttf|otf)(\?v=\d+\.\d+\.\d+)?$/,
+          test: /\.(ttf|otf|woff)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
             {
               loader: "file-loader",
