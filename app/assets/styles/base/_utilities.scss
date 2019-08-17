@@ -1,9 +1,5 @@
 // utilities as a small toolbox sass file for quick fixes
 
-input[type="number"] {
-  appearance: textfield;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+.u-white {
+  color: $color-white !important;
 }

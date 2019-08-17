@@ -1,0 +1,33 @@
+.skills {
+  margin-top: 90vh;
+  &__header {
+    color: $color-secondary;
+    font-family: $satisfy;
+    font-size: 4.4rem;
+    min-height: 8rem;
+    margin-left: 3rem;
+    position: relative;
+    &--underline {
+      position: absolute;
+      top: 4rem;
+      right: 91.5%;
+      width: 11.5rem;
+    }
+  }
+  &__skill-1 {
+    &--image {
+      margin-top: 10rem;
+      width: 90%;
+      margin-left: 4rem;
+    }
+  }
+  &__skill-2{
+    &--image {
+        margin-top: 10rem;
+        width: 50%;
+        height: 49rem;
+        margin-left: 30rem;
+      }
+  }
+}
+
