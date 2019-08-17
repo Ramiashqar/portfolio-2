@@ -1,0 +1,74 @@
+// MIXINS
+
+//clear fix trick for floated elements
+@mixin clearfix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+
+//absolute centering for block elements vertically and horizontally
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+
+// 0 - 375px: small phone
+// 375 -600px:   phone
+// 600 - 900px:    Tablet Portrait
+// 900 - 1200px:   Tablet landscape
+// [1200px - 18000x] is where our normal style apply
+// 1800px ++:  BIG DESKTOP
+
+// $breakpoint argument choices:
+
+// -phone-small
+// -phone
+// -tab-port
+// -tab-land
+// -desk
+// -big-desk
+
+//ORDER base + typography > general layout + grid > page layout > component
+
+// 1em = 16px
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone-small {
+    @media only screen and (max-width: 23.4em) {
+      @content;
+    }
+  }
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint==desk {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint==big-desk {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+// BASE
+
+// acts as my own normalize.css :
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //set 1 rem base value
+  font-size: 62.5%; // 1rem= 10px; 10px/16px= 62.5%
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem= 9px;
+  }
+  @include respond(tab-port) {
+    font-size: 50%; //1rem= 8px;
+  }
+  @include respond(big-desk) {
+    font-size: 120%; //1rem= 12px;
+  }
+  line-height: 1.5rem;
+}
+
+body {
+  width: 100%;
+  padding: 2rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+
+}
+
+//Anchor
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//Blockquote
+blockquote {
+  margin: 2rem 0;
+  padding-left: 1rem;
+  border-left: 0.4rem solid #000000;
+}

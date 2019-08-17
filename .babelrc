@@ -1,0 +1,19 @@
+{
+  "presets": [
+          [
+              "@babel/preset-env",
+              {
+                  "useBuiltIns": "usage", // "usage" | "entry" | false, defaults to false.
+                  "corejs": "3.1.4",
+                  "targets": {
+                      "esmodules": true,
+                      "ie": "11"
+                  }
+              }
+          ]
+      ],
+    "plugins": [
+      ["@babel/plugin-transform-runtime"],
+      ["@babel/plugin-transform-regenerator"]
+    ]
+  }
