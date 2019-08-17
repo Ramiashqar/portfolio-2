@@ -1,3 +1,38 @@
 // HEADER
 
 
+.header{
+    &__logo{
+        width: 9rem;
+       margin: 3rem 0 1rem 3rem;
+    }
+    &__intro{
+        text-align: center;
+        @include absCenter;
+        line-height: 1.5;
+        font-size: 5rem;
+        animation: intro 2s ease;
+        opacity: 1;
+    &--name{
+        display: inline-block;
+        animation: changeColor 2s ease 0s 1;
+        color: $color-primary;
+    }
+    }
+    &__down-arr{
+        display: block;
+        opacity: .05;
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3rem;
+        transition: all .3s ease;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+            width: 3.3rem;
+            animation: pulse 1s ease infinite alternate;
+        }
+    }
+}

@@ -4,7 +4,7 @@
   "description": "My portfolio",
   "main": "index.js",
   "scripts": {
-    "devServer": "webpack-dev-server --config=config/webpack.dev.js",
+    "devServer": "webpack-dev-server --hot --config=config/webpack.dev.js",
     "buildDev": "webpack --config=config/webpack.dev.js --env.NODE_ENV=production",
     "buildProd": "webpack --config=config/webpack.prod.js --env.NODE_ENV=production",
     "devExpress": "nodemon --inspect --watch app/server --watch config app/server/main.js",
@@ -47,6 +47,7 @@
     "tinify-loader": "^0.2.4",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
+    "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.8.0",
     "webpack-hot-middleware": "^2.25.0"
   },
