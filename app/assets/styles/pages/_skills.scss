@@ -1,11 +1,13 @@
 .skills {
+  overflow: hidden;
   margin-top: 90vh;
+  position: relative;
   &__header {
     color: $color-secondary;
     font-family: $satisfy;
     font-size: 4.4rem;
     min-height: 8rem;
-    margin-left: 3rem;
+    margin: 2rem 0 0 3rem;
     position: relative;
     &--underline {
       position: absolute;
@@ -15,19 +17,113 @@
     }
   }
   &__skill-1 {
+    width: 100%;
+    top: 5%;
     &--image {
-      margin-top: 10rem;
+      margin: 10rem 0 0 4rem;
       width: 90%;
-      margin-left: 4rem;
     }
   }
-  &__skill-2{
+  &__skill-2 {
     &--image {
-        margin-top: 10rem;
-        width: 50%;
-        height: 49rem;
-        margin-left: 30rem;
+      margin: 1rem 0 0 45rem;
+      width: 25%;
+      height: 40rem;
+    }
+  }
+  &__skill-3 {
+    &--image {
+      margin: 10rem 0 0 13rem;
+      width: 77%;
+      padding-bottom: 5rem;
+    }
+    &--tools {
+      list-style: none;
+      font-size: 2.7rem;
+      font-family: $source-code;
+      color: $color-primary;
+      display: none;
+      visibility: hidden;
+    }
+  }
+  &__skill-4 {
+    &--items {
+      position: relative;
+      width: 50%;
+      height: 40rem;
+      margin-left: 37rem;
+      list-style: none;
+      & > li {
+        position: absolute;
       }
+      &-1 {
+        top: 5%;
+        left: -5%;
+      }
+      &-2 {
+        top: 35%;
+        left: -35%;
+      }
+      &-3 {
+        top: 75%;
+        left: -10%;
+        &--water {
+          height: 10rem !important;
+        }
+      }
+      &-4 {
+        top: 40%;
+        left: 10%;
+        &--water {
+          height: 9rem !important;
+        }
+      }
+      &-5 {
+        top: 10%;
+        left: 40%;
+        &--water {
+          height: 10rem !important;
+        }
+      }
+      &-6 {
+        top: 5%;
+        left: 85%;
+      }
+      &-7 {
+        top: 45%;
+        left: 65%;
+      }
+      &-8 {
+        top: 70%;
+        left: 35%;
+      }
+      &-9 {
+        top: 75%;
+        left: 90%;
+      }
+    }
+  }
+  &__skill-5 {
+    margin-left: 4.2rem;
+    top: 5% !important;
+    &--items {
+      padding-top: 6rem;
+      margin-left: 4rem;
+      font-size: 2rem;
+      list-style: none;
+      text-align: center;
+      line-height: 1.5;
+    }
+    &--bars {
+      padding-top: 6rem;
+      margin-left: 17rem !important;
+      position: absolute;
+      width: 100%;
+      font-size: 2rem;
+      list-style: none;
+      text-align: center;
+      line-height: 1.5;
+      top: 0;
+    }
   }
 }
-

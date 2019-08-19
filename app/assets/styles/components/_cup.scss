@@ -1,0 +1,37 @@
+.cup {
+  background: $color-white;
+  border-radius: 50%;
+  width: 13rem;
+  height: 13rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  &__name {
+    font-size: 2.1rem;
+    color: $color-white;
+    font-weight: bolder;
+    text-align: center;
+    z-index: 100;
+    @include absCenter;
+    font-family: $source-code;
+  }
+  &__water {
+    background-image: url("../../images/svg/water-waves.svg");
+    background-position: top left;
+    position: absolute;
+    bottom: 0;
+    width: 13rem;
+    height: 11rem;
+    transition: all 1s ease-out;
+    background-repeat: no-repeat;
+  }
+}
+.cup:hover .cup__water {
+  height: 12rem;
+  background-position: top right;
+  transition: all 1s ease-out;
+}
