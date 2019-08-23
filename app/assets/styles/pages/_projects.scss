@@ -1,0 +1,44 @@
+.projects {
+  margin-top: 6rem;
+  &__nav {
+    background-color: rgba($color-white, 0.05);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 2.4rem;
+    color: $color-primary;
+    text-decoration: none;
+    padding: 2rem;
+    font-family: $roboto-black;
+    letter-spacing: 0.2rem;
+    transition: letter-spacing 0.5s ease, background-color 0.5s ease;
+    &:hover {
+      background-color: $color-dark;
+      cursor: pointer;
+      letter-spacing: 0.6rem;
+      &>nav{
+        color: $color-white;
+      }
+    }
+
+  }
+  &__project {
+    // float: left;
+    // width: 40rem;
+    // @include clearfix;
+    // overflow: hidden;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      transform: translate(0, -10%) scale(1.1);
+      // border-radius: 50%;
+      // height: 10rem;
+      // width: 50rem;
+    }
+    & > img {
+      height: 25rem;
+    }
+  }
+}

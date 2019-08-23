@@ -3,63 +3,102 @@
 .u-white {
   color: $color-white !important;
 }
-.u-satisfy{
+.u-satisfy {
   font-family: $satisfy !important;
   font-size: 2.7rem !important;
 }
-.u-roboto{
+.u-roboto {
   font-family: $roboto-regular !important;
   top: 55% !important;
 }
-.u-95{
+.u-95 {
   &::after {
     width: 95%;
   }
 }
-.u-90{
+.u-90 {
   &::after {
     width: 90%;
   }
 }
-.u-85{
+.u-85 {
   &::after {
     width: 85%;
   }
 }
-.u-80{
+.u-80 {
   &::after {
     width: 80%;
   }
 }
-.u-75{
+.u-75 {
   &::after {
     width: 65%;
   }
 }
-.u-60{
+.u-60 {
   &::after {
     width: 60%;
   }
 }
 
-.u-50{
+.u-50 {
   &::after {
     width: 50%;
   }
 }
-.u-45{
+.u-45 {
   &::after {
     width: 45%;
   }
 }
-.u-35{
+.u-35 {
   &::after {
     width: 35%;
   }
 }
-.u-scroll-magic{
+.u-scroll-magic {
   position: absolute;
   width: 100%;
   top: 11%;
   background-color: $color-dark;
+}
+.u-visit {
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 19.4%;
+  left: 34.4%;
+  height: 27rem;
+  width: 47.3rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  padding: 1rem 1.5rem;
+  background-color: rgba($color-dark, 0.8);
+  opacity: 1;
+  animation: slideUp 1s ease;
+  transform: translateY(0);
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
+  & > i {
+    animation: intro ease 2.5s;
+    @include absCenter;
+    background-color: rgba($color-dark, 0.8);
+    transition: letter-spacing 0.5s ease;
+    border: 1px solid $color-primary;
+    border-radius: 3rem;
+    padding: 1.5rem 1.7rem;
+    
+    &:hover {
+      background-color: rgba($color-white, 0.05);
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+.u-cover {
+  transition: all 0.5s ease;
+  transform: translateY(80%);
+  opacity: 0;
+  display: none;
 }

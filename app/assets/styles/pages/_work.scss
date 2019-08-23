@@ -1,0 +1,105 @@
+.work {
+  width: 100%;
+  //   height: 100%;
+  overflow: hidden;
+  -webkit-perspective: 150;
+  perspective: 150;
+  //   background-color: rgba($color-white, 0.05);
+  border-radius: 1rem;
+  &__slides {
+    width: 300%; /* to contain 4 panels, each with 100% of window width */
+    // height: 100% !important;
+  }
+  &__panel {
+    height: 100% !important;
+    width: 33.33%; /* relative to parent -> 33.33% of 300% = 100% of window width */
+    float: left;
+    background-color: $color-dark;
+    position: relative;
+    overflow: hidden;
+    &--project {
+      width: 53rem;
+      margin: 1rem 0 1rem 40rem;
+      position: relative;
+      overflow: hidden;
+      transition: all .3s ease;
+      &:hover {
+        cursor: pointer;
+        transform: scale(.99);
+      }
+      & > img {
+        opacity: 0.95;
+      }
+      & > figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($color-dark, .9);
+        border-radius: 1rem;
+        display: block;
+        height: 62%;
+        width: 100%;
+        transform: scale(3);
+        opacity: 0;
+        letter-spacing: .15rem;
+        transition: all .5s ease;
+        &>a{
+          @include absCenter;
+          background-color: $color-white;
+          border: .3rem solid $color-white;
+          color: $color-dark;
+          font-size: 2rem;
+          padding: 1rem 1.3rem;
+          border-radius: 3rem;
+          transition: all .4s ease-out;
+          &:hover{
+            letter-spacing: .5rem;
+            padding: 1rem 1.7rem;
+            background-color: $color-dark;
+            color: $color-white;
+          }
+        }
+      }
+    }
+    &--desc {
+      margin-left: 5rem;
+      line-height: 2;
+      & > h3 {
+        color: $color-primary;
+        font-size: 1.8rem;
+      }
+      & > p {
+        font-size: 1.6rem;
+      }
+    }
+    &--others {
+      padding: 1rem 4rem 1rem 2rem;
+      color: $color-dark;
+      background-color: rgba($color-white, 0.16);
+      font-size: 1.4rem;
+      position: absolute;
+      top: 50%;
+      right: -3%;
+      border-radius: 4rem;
+      letter-spacing: 0.5rem;
+      transition: all 0.5s ease;
+      &:hover {
+        cursor: pointer;
+        background-color: $color-white;
+        padding-right: 2rem;
+        right: 1%;
+      }
+    }
+  }
+  &__underline {
+    position: absolute;
+    top: 4rem;
+    right: 86.5%;
+    width: 17.5rem;
+  }
+}
+
+.work__panel--project:hover figcaption{
+  opacity: 1;
+  transform: scale(1)
+}

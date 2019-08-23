@@ -14,7 +14,7 @@ const server = express(),
     config.devServer
   ),
   staticMiddleware = express.static("dist"),
-  PORT = process.env.PORT || 8080,
+  PORT = process.env.PORT || 5500,
   expressStaticGzip = require("express-static-gzip");
 
 server.use(webpackDevMiddleware);

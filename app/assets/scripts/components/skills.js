@@ -4,31 +4,31 @@ import ScrollMagic from "scrollmagic";
 import "imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
 
 document.addEventListener("DOMContentLoaded", function() {
-  var controller = new ScrollMagic.Controller();
-  var wipeAnimation = new TimelineMax()
+  const controller = new ScrollMagic.Controller();
+  const wipeAnimation = new TimelineMax()
     .fromTo(
       ".skills__skill-2",
       1,
       { y: "100%" },
-      { y: "0%", ease: Linear.easeNone }
+      { y: "0%", ease: Linear.easeNone, delay: 1 }
     )
     .fromTo(
       ".skills__skill-3",
       1,
       { x: "100%" },
-      { x: "0%", ease: Linear.easeNone }
+      { x: "0%", ease: Linear.easeNone, delay: 1 }
     )
     .fromTo(
       ".skills__skill-4",
       1,
       { x: "-100%" },
-      { x: "0%", ease: Linear.easeNone }
+      { x: "0%", ease: Linear.easeNone, delay: 1 }
     )
     .fromTo(
       ".skills__skill-5",
       1,
       { y: "100%" },
-      { y: "0%", ease: Linear.easeNone }
+      { y: "0%", ease: Linear.easeNone, delay: 1 }
     );
   // create scene to pin and link animation
   new ScrollMagic.Scene({

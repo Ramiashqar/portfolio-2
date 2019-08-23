@@ -6,11 +6,11 @@ module.exports = {
     main: [
       "webpack-hot-middleware/client?reload=true", //ignored with heroku use only
       "./app/assets/scripts/index.js"
-    ]
-    // sub: [
-    //   "webpack-hot-middleware/client?reload=true",
-    //   "./app/assets/scripts/sub-index.js",
-    // ],
+    ],
+    sub: [
+      "webpack-hot-middleware/client?reload=true",
+      "./app/assets/scripts/sub-index.js",
+    ],
   },
   mode: "development",
   output: {
@@ -38,14 +38,14 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.js$/,
-        use: [
-          {
-            loader: "imports-loader?define=>false"
-          }
-        ]
-      },
+      // {
+      //   test: /\.js$/,
+      //   use: [
+      //     {
+      //       loader: "imports-loader?define=>false"
+      //     }
+      //   ]
+      // },
       {
         test: /\.css$/,
         use: [
@@ -129,14 +129,14 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(), //ignored with heroku use only
-    // new HTMLWebpackPlugin({
-    //   template: "./app/sub-index.html",
-    //   filename: "sub-index.html",
-    //   inject: true,
-    //   chunks: ["sub"],
-    //   title: "Webpack Setup 2",
-    //   favicon: "./app/assets/images/favicon.png",
-    // }),
+    new HTMLWebpackPlugin({
+      template: "./app/allProjects.html",
+      filename: "allProjects.html",
+      inject: true,
+      chunks: ["sub"],
+      title: "All Projects",
+      favicon: "./app/assets/images/favicon.png",
+    }),
     new HTMLWebpackPlugin({
       template: "./app/index.html",
       inject: true,

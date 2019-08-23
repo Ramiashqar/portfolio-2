@@ -16,6 +16,20 @@
     background-color: transparent;
   }
 }
+@keyframes introBtn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    opacity: 50%;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
 @keyframes changeColor {
   0% {
     color: $color-white;
@@ -30,5 +44,13 @@
   }
   100% {
     transform: translateX(-50%) scale(0.91);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(80%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
