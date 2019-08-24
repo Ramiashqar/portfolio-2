@@ -1,3 +1,58 @@
 // FOOTER
 
+.footer {
+  margin-top: 10rem;
+  background-image: linear-gradient(rgba($color-white, 0.05));
+  clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+  color: $color-primary;
+  position: relative;
+//   font-family: $satisfy;
+  &__header {
+    padding-top: 10rem;
+    font-family: $satisfy;
+    font-size: 3.4rem;
+    text-align: center;
+  }
+  &__desc {
+    margin-top: 7rem;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 1.5;
+    text-transform: capitalize;
+    // letter-spacing: .2rem;
+    font-family: $source-code;
+  }
+  &__download {
+    display: inline-block;
+    margin: 4rem 0 0 57rem;
+    text-align: center;
 
+    & > img {
+      width: 60%;
+      transition: all 0.3s ease-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__social {
+    text-align: center;
+    margin: 4rem 0;
+    &--icon {
+      display: inline-block;
+      & > img {
+        width: 60%;
+        transition: all 0.3s ease-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  &__copyright {
+    font-family: $satisfy;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}

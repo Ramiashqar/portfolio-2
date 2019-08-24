@@ -1,3 +1,82 @@
 // NAVIGATION
 
+.menu {
+  &__icon {
+    display: block;
+    position: fixed;
+    background-color: rgba($color-white, 0.16);
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    top: -11%;
+    right: -7%;
+    transition: all 0.3s ease;
+    z-index: 1010;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    & > div,
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 18%;
+      background-color: $color-dark;
+      border-radius: 0.5rem;
+      height: 0.3rem;
+      width: 3.5rem;
+      transition: all 0.7s ease;
+    }
+    & > div {
+      top: 65%;
+    }
+    &::before {
+      top: 60%;
+    }
+    &::after {
+      top: 70%;
+    }
+    &--effects {
+      animation: menuBig 1.5s ease;
+      & > div {
+        transform: scale(0);
+      }
+      &::before {
+        transform: rotate(50deg);
+        top: 65%;
+      }
+      &::after {
+        transform: rotate(-50deg);
+        top: 65%;
+      }
+    }
+  }
+  background-color: $color-dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  &__items {
+    @include absCenter;
+    list-style: none;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3.3;
 
+    // width: 21rem;
+    & > a {
+      & > li {
+        padding: 0 3rem;
+        transition: all 0.7s ease;
+        &:hover {
+          background-color: rgba($color-white, 0.16);
+          border-radius: 5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

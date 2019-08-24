@@ -12,6 +12,26 @@
 </head>
 
 <body>
+  <div class="menu__icon ">
+    <div></div>
+  </div>
+  <nav class="menu u-hide">
+    <a href="index.html"><img src="assets/images/svg/logo.svg" alt="Rami logo" class="header__logo" /></a>
+    <ul class="menu__items">
+      <a href="#home" class="menu__items--item menu__items--item-1">
+        <li >Home</li>
+      </a>
+      <a href="#skills" class="menu__items--item menu__items--item-2">
+        <li>Skills</li>
+      </a>
+      <a href="#work" class="menu__items--item menu__items--item-3">
+        <li>Projects</li>
+      </a>
+      <a href="#contactMe" class="menu__items--item menu__items--item-4">
+        <li>Contact Me</li>
+      </a>
+    </ul>
+  </nav>
 
   <header class="header" id="home">
     <a href="index.html"><img src="assets/images/svg/logo.svg" alt="Rami logo" class="header__logo" /></a>
@@ -19,8 +39,7 @@
     <h1 class="header__intro">
       Hi,<br /> I am <span class="header__intro--name">Rami Ashqar</span>,<br />Front End Developer.
     </h1>
-    <a href="#skills"><img src="assets/images/svg/down-arrow.svg" alt="down arrow" class="header__down-arr"></a>
-
+    <a href="#skills" id="down"><img src="assets/images/svg/down-arrow.svg" alt="down arrow" class="header__down-arr"></a>
   </header>
 
   <!-- SKILLS -->
@@ -162,7 +181,7 @@
           <img src="assets/images/svg/underline.svg" alt="underline svg" class="work__underline">
         </h2>
         <figure class="work__panel--project">
-          <img src="assets/images/pomodoro-mainX3.png" alt="pomodoro project" />
+          <img src="assets/images/pomodoro-mainX3.png" alt="pomodoro project" class="lazyload" />
           <figcaption class="work__panel--project--details">
             <a href="https://ramiashqar.github.io/pomodoro/" target="_blank">Visit Project</a>
           </figcaption>
@@ -179,7 +198,7 @@
           <img src="assets/images/svg/underline.svg" alt="underline svg" class="work__underline">
         </h2>
         <figure class="work__panel--project">
-          <img src="assets/images/cofee-love-mainX3.png" alt="cofee-love project" />
+          <img src="assets/images/cofee-love-mainX3.png" alt="cofee-love project" class="lazyload" />
           <figcaption class="work__panel--project--details">
             <a href="https://ramiashqar.github.io/coffee-love/" target="_blank">Visit Project</a>
           </figcaption>
@@ -194,7 +213,7 @@
           <img src="assets/images/svg/underline.svg" alt="underline svg" class="work__underline">
         </h2>
         <figure class="work__panel--project">
-          <img src="assets/images/portfolio-mainX3.png" alt="portfolio-1 project" />
+          <img src="assets/images/portfolio-mainX3.png" alt="portfolio-1 project" class="lazyload" />
           <figcaption class="work__panel--project--details">
             <a href="https://ramiashqar.tk" target="_blank">Visit Project</a>
           </figcaption>
@@ -208,8 +227,33 @@
         <a href="allProjects.html" target="_blank" class="work__panel--others">View More</a>
       </section>
     </div>
-
   </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer" id="contactMe">
+    <h2 class="footer__header u-white">Thanks For Visiting</h2>
+    <p class="footer__desc">Want to chat about something<br />Contact me or Download the Resume</p>
+    <a class="footer__download" href="#!"><img src="assets/images/svg/download-file.svg" alt="download Resume"></a>
+    <div class="footer__social">
+      <a href="#!" class="footer__social--icon">
+        <img src="assets/images/svg/telegram.svg" alt="telegram">
+      </a>
+      <a href="#!" class="footer__social--icon">
+        <img src="assets/images/svg/whatsapp.svg" alt="whatsapp">
+      </a>
+      <a href="#!" class="footer__social--icon">
+        <img src="assets/images/svg/github.svg" alt="twitter">
+      </a>
+      <a href="#!" class="footer__social--icon">
+        <img src="assets/images/svg/twitter.svg" alt="github">
+      </a>
+      <a href="#!" class="footer__social--icon">
+        <img src="assets/images/svg/mail.svg" alt="mail">
+      </a>
+    </div>
+    <p class="footer__copyright"><a href="#!">© Rami Ashqar</a></p>
+  </footer>
 </body>
 
 </html>

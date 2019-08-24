@@ -102,3 +102,19 @@
   opacity: 0;
   display: none;
 }
+.u-hide{
+  display: none;
+  visibility: hidden;
+}
+.u-active{
+  &>li{
+    background-color: rgba($color-white, 0.16);
+    border-radius: 5rem;
+  }
+}
+.u-kill{
+  &>li{
+    background-color: transparent;
+    border-radius: 0;
+  }
+}

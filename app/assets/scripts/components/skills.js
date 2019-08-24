@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
     .fromTo(
       ".skills__skill-3",
       1,
-      { x: "100%" },
-      { x: "0%", ease: Linear.easeNone, delay: 1 }
+      { y: "100%" },
+      { y: "0%", ease: Linear.easeNone, delay: 1 }
     )
     .fromTo(
       ".skills__skill-4",
       1,
-      { x: "-100%" },
-      { x: "0%", ease: Linear.easeNone, delay: 1 }
+      { y: "100%" },
+      { y: "0%", ease: Linear.easeNone, delay: 1 }
     )
     .fromTo(
       ".skills__skill-5",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
   new ScrollMagic.Scene({
     triggerElement: "#skills",
     triggerHook: "onLeave",
-    duration: "450%"
+    duration: "400%"
   })
     .setPin("#skills")
     .setTween(wipeAnimation)
