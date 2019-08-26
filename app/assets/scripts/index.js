@@ -1,7 +1,9 @@
 // require("../styles/app.css");
 import lazySizes from "lazysizes";
-// import 'lazysizes/plugins/respimg/ls.respimg';
+// import "lazysizes/plugins/respimg/ls.respimg";
+
 require("../styles/app.scss");
+// require("html-loader?attrs=img:data-srcset!./../../index.html");
 require("../../index.html");
 require("./components/skills");
 require("./components/work");
@@ -12,7 +14,7 @@ require("./components/utilities");
 
 //SomoothScrolling.js
 require("./smooth-scroll.polyfills");
-const scroll = new SmoothScroll('#down', {
+const scroll = new SmoothScroll("#down", {
   easing: "easeOutCubic"
 });
 

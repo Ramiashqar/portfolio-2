@@ -18,6 +18,9 @@
     z-index: 100;
     @include absCenter;
     font-family: $source-code;
+    @include respond(big-desk) {
+      line-height: 1.5;
+      }
   }
   &__water {
     background-image: url("../../images/svg/water-waves.svg");
@@ -28,10 +31,16 @@
     height: 11rem;
     transition: all 1s ease-out;
     background-repeat: no-repeat;
+    @include respond(big-desk) {
+    background-image: linear-gradient($color-primary);
+    }
   }
 }
 .cup:hover .cup__water {
   height: 12rem;
   background-position: top right;
   transition: all 1s ease-out;
+  @include respond(big-desk) {
+    height: 15rem;
+    }
 }

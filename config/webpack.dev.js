@@ -9,8 +9,8 @@ module.exports = {
     ],
     sub: [
       "webpack-hot-middleware/client?reload=true",
-      "./app/assets/scripts/sub-index.js",
-    ],
+      "./app/assets/scripts/sub-index.js"
+    ]
   },
   mode: "development",
   output: {
@@ -66,7 +66,7 @@ module.exports = {
           {
             loader: "html-loader",
             options: {
-              attrs: ["img:src"]
+              attrs: ["img:src"],
             }
           }
         ]
@@ -135,7 +135,7 @@ module.exports = {
       inject: true,
       chunks: ["sub"],
       title: "All Projects",
-      favicon: "./app/assets/images/favicon.png",
+      favicon: "./app/assets/images/favicon.png"
     }),
     new HTMLWebpackPlugin({
       template: "./app/index.html",

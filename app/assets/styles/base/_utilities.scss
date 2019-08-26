@@ -10,6 +10,9 @@
 .u-roboto {
   font-family: $roboto-regular !important;
   top: 55% !important;
+  @include respond(big-desk){
+    line-height: 1.5;
+  }
 }
 .u-95 {
   &::after {
@@ -89,7 +92,7 @@
     border: 1px solid $color-primary;
     border-radius: 3rem;
     padding: 1.5rem 1.7rem;
-    
+
     &:hover {
       background-color: rgba($color-white, 0.05);
       letter-spacing: 0.5rem;
@@ -102,19 +105,41 @@
   opacity: 0;
   display: none;
 }
-.u-hide{
+.u-hide {
   display: none;
   visibility: hidden;
 }
-.u-active{
-  &>li{
+.u-active {
+  & > li {
     background-color: rgba($color-white, 0.16);
     border-radius: 5rem;
   }
 }
-.u-kill{
-  &>li{
+.u-kill {
+  & > li {
     background-color: transparent;
     border-radius: 0;
+  }
+}
+.u-inactive {
+  position: relative;
+  &:hover {
+    &::before {
+      display: inline-block;
+      position: absolute;
+      top: -5%;
+      left: 10%;
+      content: "Not Active";
+      font-size: 2rem;
+      padding-top: 0.3rem;
+      font-family: $roboto-black;
+      color: red;
+      height: 100%;
+      width: 80%;
+      border-radius: 50%;
+      background-color: $color-dark;
+      z-index: 100;
+      cursor: none;
+    }
   }
 }

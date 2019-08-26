@@ -26,27 +26,53 @@
     display: inline-block;
     margin: 4rem 0 0 57rem;
     text-align: center;
-
+    @include respond(big-desk) {
+      margin-left: 62rem;
+      }
     & > img {
       width: 60%;
       transition: all 0.3s ease-out;
       &:hover {
         transform: scale(1.1);
       }
+      @include respond(big-desk) {
+        width: 100%;
+        }
     }
   }
   &__social {
     text-align: center;
     margin: 4rem 0;
+
     &--icon {
       display: inline-block;
+      @include respond(big-desk) {
+        margin: 0 1rem;
+        }
       & > img {
         width: 60%;
         transition: all 0.3s ease-out;
         &:hover {
           transform: scale(1.1);
         }
+        @include respond(big-desk) {
+          width: 100%;
+          }
       }
+    }
+  }
+  &__sketch{
+    display: inline-block;
+    color: $color-white;
+    font-family: $source-code;
+    font-size: 1.8rem;
+    // margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+    &:hover{
+      font-size: 2rem;
     }
   }
   &__copyright {
@@ -54,5 +80,6 @@
     font-size: 2rem;
     padding-bottom: 2rem;
     text-align: center;
+    margin-top: 10rem;
   }
 }
