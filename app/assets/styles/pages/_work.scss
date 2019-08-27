@@ -1,14 +1,10 @@
 .work {
   width: 100%;
-  //   height: 100%;
   overflow: hidden;
   -webkit-perspective: 150;
   perspective: 150;
-  //   background-color: rgba($color-white, 0.05);
-  border-radius: 1rem;
   &__slides {
-    width: 300%; /* to contain 4 panels, each with 100% of window width */
-    // height: 100% !important;
+    width: 300%; /* to contain 3 panels, each with 100% of window width */
   }
   &__panel {
     height: 100% !important;
@@ -19,7 +15,8 @@
     overflow: hidden;
     &--project {
       width: 53rem;
-      margin: 1rem 0 1rem 40rem;
+      // margin: 1rem 0 1rem 40rem;
+      margin: 0 auto;
       position: relative;
       overflow: hidden;
       transition: all .3s ease;
@@ -28,7 +25,18 @@
         transform: scale(.99);
       }
       & > img {
-        opacity: 0.95;
+        @include respond(tab-port){
+          width: 80%;
+          margin-left: 3rem;
+        }
+        @include respond(phone){
+          width: 50%;
+          margin-left: 10rem;
+        }
+        @include respond(phone-small) {
+          width: 40%;
+          margin-left: 8rem;
+        }
       }
       & > figcaption {
         position: absolute;
@@ -43,6 +51,10 @@
         opacity: 0;
         letter-spacing: .15rem;
         transition: all .5s ease;
+        @include respond(phone-small) {
+          width: 55.5%;
+          height: 60%;
+        }
         &>a{
           @include absCenter;
           background-color: $color-white;
@@ -57,19 +69,45 @@
             padding: 1rem 1.7rem;
             background-color: $color-dark;
             color: $color-white;
+            @include respond(phone-small) {
+              letter-spacing: initial;
+              padding: initial;
+            }
           }
         }
       }
     }
     &--desc {
       margin-left: 5rem;
-      line-height: 2;
+      line-height: 1.5;
+      @include respond(big-desk){
+        line-height: 3;
+      }
+      @include respond(phone){
+        line-height: 2;
+        margin-left: 2rem;
+      }
+      @include respond(phone-small) {
+        margin: 3rem 0 0 2rem;
+      }
       & > h3 {
         color: $color-primary;
         font-size: 1.8rem;
+        @include respond(big-desk){
+          margin-top: 2rem;
+          font-size: 2.4rem;
+        }
+
       }
       & > p {
         font-size: 1.6rem;
+        @include respond(big-desk){
+          font-size: 2rem;
+        }
+        @include respond(phone-small) {
+          font-size: 1.4rem;
+          margin-top: 1rem;
+        }
       }
     }
     &--others {
@@ -83,6 +121,13 @@
       border-radius: 4rem;
       letter-spacing: 0.5rem;
       transition: all 0.5s ease;
+      @include respond(tab-port){
+        top: 15%;
+        cursor: pointer;
+        background-color: $color-white;
+        padding-right: 2rem;
+        right: 1%;
+      }
       &:hover {
         cursor: pointer;
         background-color: $color-white;
@@ -96,10 +141,16 @@
     top: 4rem;
     right: 86.5%;
     width: 17.5rem;
+    @include respond(tab-land){
+      opacity: 0;
+    }
   }
 }
 
 .work__panel--project:hover figcaption{
   opacity: 1;
-  transform: scale(1)
+  transform: scale(1);
+  @include respond(tab-land) {
+    opacity: 0 !important;
+  }
 }

@@ -1,41 +1,54 @@
 .skills {
   overflow: hidden;
-  margin-top: 90vh;
+  margin-top: 93vh;
   position: relative;
+  height: auto;
   &__header {
     color: $color-secondary;
     font-family: $satisfy;
     font-size: 4.4rem;
     min-height: 8rem;
-    margin: 2rem 0 0 3rem;
+    margin: 2rem 0 6rem 3rem;
     position: relative;
     &--underline {
       position: absolute;
       top: 4rem;
       right: 91.5%;
       width: 11.5rem;
+      @include respond(tab-land){
+        opacity: 0;
+      }
     }
   }
   &__skill-1 {
     width: 100%;
-    top: 5%;
+    margin-top: 2rem;
     &--image {
-      margin: 10rem 0 0 4rem;
+      display: block;
+      margin: 0 auto;
       width: 90%;
     }
   }
   &__skill-2 {
+    margin-top: 2rem;
     &--image {
-      margin: 1rem 0 0 45rem;
+      display: block;
+      margin: 1rem auto;
       width: 25%;
-      height: 40rem;
+      height: 30rem;
     }
   }
   &__skill-3 {
+    margin-top: 2rem;
+    padding-top: 4rem;
+    @include respond(big-desk){
+      padding-top: 2rem;
+    }
     &--image {
-      margin: 10rem 0 0 13rem;
+      display: block;
+      margin: 0 auto;
       width: 77%;
-      padding-bottom: 5rem;
+      padding-bottom: 6rem;
     }
     &--tools {
       list-style: none;
@@ -47,18 +60,27 @@
     }
   }
   &__skill-4 {
+    margin-top: 2rem;
+    padding-top: 2rem;
     &--items {
       position: relative;
       width: 50%;
-      height: 40rem;
-      margin-left: 37rem;
+      height: 30rem;
+      margin: 0 auto;
       list-style: none;
+      @include respond(phone){
+        width: 55%;
+      }
       & > li {
         position: absolute;
       }
       &-1 {
-        top: 5%;
-        left: -5%;
+        top: 3%;
+        left: -8%;
+        @include respond(phone){
+          top: 0;
+          left: -14%;
+        }
       }
       &-2 {
         top: 35%;
@@ -69,6 +91,9 @@
         left: -10%;
         &--water {
           height: 10rem !important;
+          @include respond(phone){
+            height: 8rem !important;
+          }
         }
       }
       &-4 {
@@ -76,6 +101,9 @@
         left: 10%;
         &--water {
           height: 9rem !important;
+        }
+        @include respond(phone){
+          height: 7rem !important;
         }
       }
       &-5 {
@@ -104,25 +132,67 @@
     }
   }
   &__skill-5 {
-    margin-left: 4.2rem;
+    margin-top: 2rem;
+    padding-top: 3rem;
+    @include respond(tab-port){
+      padding-top: 1rem;
+    }
     &--items {
-      padding-top: 6rem;
+      padding-top: 1rem;
       margin-left: 4rem;
       font-size: 2rem;
       list-style: none;
       text-align: center;
-      line-height: 1.5;
+      line-height: 1.3;
+      @include respond(big-desk) {
+        padding-top: 2rem;
+      }
+      @include respond(tab-port){
+        padding-top: 0;
+        margin-left: -10rem;
+      }
+      @include respond(phone){
+        padding-top: 0;
+        font-size: 1.6rem;
+        margin-left: 0rem;
+      }
+      @include respond(phone-small) {
+        font-size: 1.5rem;
+      }
     }
     &--bars {
-      padding-top: 6rem;
+      padding-top: 1rem;
       margin-left: 17rem !important;
       position: absolute;
       width: 100%;
       font-size: 2rem;
       list-style: none;
       text-align: center;
-      line-height: 1.5;
+      line-height: 1.3;
       top: 0;
+      @include respond(big-desk) {
+        padding-top: 2rem;
+      }
+      @include respond(tab-port){
+        width: 80%;
+        padding-top: 4rem;
+        margin-left: 1rem !important;
+        top: 0;
+        margin-left: 0;
+        text-align: left;
+        line-height: 1.5;
+      }
+      @include respond(phone){
+        font-size: 1.6rem;
+        margin-left: 8rem !important;
+        font-size: 1.6rem;
+        width: 70%;
+        line-height: 1.1;
+      }
+      @include respond(phone-small) {
+        line-height: 1.5;
+
+      }
     }
   }
 }

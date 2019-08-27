@@ -1,13 +1,22 @@
 .skill-name {
-    font-size: 4.4rem;
-    margin: 8rem 0 7rem 0;
-    text-align: center;
-    color: $color-primary;
-    &__number {
-      color: $color-dark;
-      background-color: rgba($color-white, 0.16);
-      padding: 1rem 2.5rem;
-      border-radius: 50%;
-      margin-right: 2rem;
-    }
+  font-size: 4.4rem;
+  margin: 8rem 0 7rem 0;
+  text-align: center;
+  color: $color-primary;
+  @include respond(tab-port) {
+    padding-bottom: 13rem;
   }
+  @include respond(phone){
+    font-size: 2.7rem;
+  }
+  @include respond(phone-small) {
+    margin: 4rem 0 7rem 0;
+  }
+  &__number {
+    color: $color-dark;
+    background-color: rgba($color-white, 0.16);
+    padding: 1rem 2.5rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+}
