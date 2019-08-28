@@ -9,27 +9,13 @@
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
-    top: -11%;
-    right: -7%;
+    top: -9rem;
+    right: -9rem;
     transition: all 0.3s ease;
     z-index: 1010;
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
-    }
-    @include respond(big-desk){
-      top: -6%;
-      right: -6%;
-    }
-    @include respond(tab-port){
-      top: -14%;
-      right: -13%;
-    }
-    @include respond(phone){
-      right: -19%;
-    }
-    @include respond(phone-small) {
-      right: -26%;
     }
     & > div,
     &::before,
@@ -80,8 +66,6 @@
     text-align: center;
     font-size: 3rem;
     line-height: 3.3;
-
-    // width: 21rem;
     & > a {
       & > li {
         padding: 0 3rem;

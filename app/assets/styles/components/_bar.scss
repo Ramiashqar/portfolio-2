@@ -1,21 +1,35 @@
+
 .bar {
-  box-sizing: content-box;
-  display: inline-block;
-  background-color: rgba($color-white, 0.1);
-  width: 75%;
-  margin-left: 2rem;
-  padding: 0.85rem;
-  position: relative;
+  content: " ";
+  display: block;
+  padding: 0.9rem 1rem;
+  width: 250%;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
   border-radius: 0.3rem;
-  &::after {
+  background-color: rgba($color-white, 0.11);
+  @include respond(phone){
+    left: 150%;
+  }
+  &::after{
     content: " ";
-    display: inline-block;
-    margin-left: 0;
+    background-color: rgba($color-white, 0.1);
+    position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba($color-white, 0.1);
-    padding: 0.85rem;
-    position: absolute;
+    
+    padding: 0.9rem 1rem;
     border-radius: 0.3rem;
   }
+  &-95{ &::after{width: 95%;}}
+  &-90{&::after{width: 90%;}}
+  &-85{&::after{width: 85%;}}
+  &-80{&::after{width: 80%;}}
+  &-75{&::after{width: 75%;}}
+  &-60{&::after{width: 60%;}}
+  &-50{&::after{width: 50%;}}
+  &-45{&::after{width: 45%;}}
+  &-35{&::after{width: 35%;}}
 }

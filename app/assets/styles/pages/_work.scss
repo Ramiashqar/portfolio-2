@@ -19,17 +19,17 @@
       margin: 0 auto;
       position: relative;
       overflow: hidden;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       &:hover {
         cursor: pointer;
-        transform: scale(.99);
+        transform: scale(0.99);
       }
       & > img {
-        @include respond(tab-port){
+        @include respond(tab-port) {
           width: 80%;
           margin-left: 3rem;
         }
-        @include respond(phone){
+        @include respond(phone) {
           width: 50%;
           margin-left: 10rem;
         }
@@ -42,30 +42,30 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba($color-dark, .9);
+        background-color: rgba($color-dark, 0.9);
         border-radius: 1rem;
         display: block;
         height: 62%;
         width: 100%;
         transform: scale(3);
         opacity: 0;
-        letter-spacing: .15rem;
-        transition: all .5s ease;
+        letter-spacing: 0.15rem;
+        transition: all 0.5s ease;
         @include respond(phone-small) {
           width: 55.5%;
           height: 60%;
         }
-        &>a{
+        & > a {
           @include absCenter;
           background-color: $color-white;
-          border: .3rem solid $color-white;
+          border: 0.3rem solid $color-white;
           color: $color-dark;
           font-size: 2rem;
           padding: 1rem 1.3rem;
           border-radius: 3rem;
-          transition: all .4s ease-out;
-          &:hover{
-            letter-spacing: .5rem;
+          transition: all 0.4s ease-out;
+          &:hover {
+            letter-spacing: 0.5rem;
             padding: 1rem 1.7rem;
             background-color: $color-dark;
             color: $color-white;
@@ -80,10 +80,10 @@
     &--desc {
       margin-left: 5rem;
       line-height: 1.5;
-      @include respond(big-desk){
+      @include respond(big-desk) {
         line-height: 3;
       }
-      @include respond(phone){
+      @include respond(phone) {
         line-height: 2;
         margin-left: 2rem;
       }
@@ -93,15 +93,14 @@
       & > h3 {
         color: $color-primary;
         font-size: 1.8rem;
-        @include respond(big-desk){
+        @include respond(big-desk) {
           margin-top: 2rem;
           font-size: 2.4rem;
         }
-
       }
       & > p {
         font-size: 1.6rem;
-        @include respond(big-desk){
+        @include respond(big-desk) {
           font-size: 2rem;
         }
         @include respond(phone-small) {
@@ -121,7 +120,7 @@
       border-radius: 4rem;
       letter-spacing: 0.5rem;
       transition: all 0.5s ease;
-      @include respond(tab-port){
+      @include respond(tab-port) {
         top: 15%;
         cursor: pointer;
         background-color: $color-white;
@@ -141,13 +140,13 @@
     top: 4rem;
     right: 86.5%;
     width: 17.5rem;
-    @include respond(tab-land){
+    @include respond(tab-land) {
       opacity: 0;
     }
   }
 }
 
-.work__panel--project:hover figcaption{
+.work__panel--project:hover figcaption {
   opacity: 1;
   transform: scale(1);
   @include respond(tab-land) {
