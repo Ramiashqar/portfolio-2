@@ -37,6 +37,7 @@
     &--image {
       display: block;
       margin: 1.5rem auto;
+      padding-top: 1rem;
       width: 14%;
       @include respond(phone) {
         width: 25%;

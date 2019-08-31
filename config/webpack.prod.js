@@ -183,15 +183,15 @@ module.exports = env => {
       // new brotliPlugin(),
       new AppManifestWebpackPlugin({
         logo: './app/assets/images/favicon.png',
-        prefix: 'images/favicon/',
-        output: 'images/favicon/',
+        prefix: 'assets/images/favicon/',
+        output: 'assets/images/favicon/',
         emitStats: false,
         statsFilename: 'iconstats-[hash].json',
         statsEncodeHtml: false,
         persistentCache: false,
         inject: true,
         config: {
-          appName: 'RGA Framework',
+          appName: 'Rami Ashqar Portfolio',
           appDescription: null,
           developerName: 'Rami Ashqar',
           developerURL: 'ramiashqar.tk',
