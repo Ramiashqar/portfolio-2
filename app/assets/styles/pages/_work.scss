@@ -3,6 +3,7 @@
   overflow: hidden;
   -webkit-perspective: 150;
   perspective: 150;
+  backface-visibility: hidden;
   &__slides {
     width: 300%; /* to contain 3 panels, each with 100% of window width */
   }
@@ -15,7 +16,6 @@
     overflow: hidden;
     &--project {
       width: 53rem;
-      // margin: 1rem 0 1rem 40rem;
       margin: 0 auto;
       position: relative;
       overflow: hidden;
@@ -25,6 +25,10 @@
         transform: scale(0.99);
       }
       & > img {
+        @include respond(big-desk) {
+          width: 50%;
+          margin-left: 8rem;
+        }
         @include respond(tab-port) {
           width: 80%;
           margin-left: 3rem;
@@ -51,6 +55,9 @@
         opacity: 0;
         letter-spacing: 0.15rem;
         transition: all 0.5s ease;
+        @include respond(big-desk) {
+          left: -10%;
+        }
         @include respond(phone-small) {
           width: 55.5%;
           height: 60%;
@@ -80,9 +87,6 @@
     &--desc {
       margin-left: 5rem;
       line-height: 1.5;
-      @include respond(big-desk) {
-        line-height: 3;
-      }
       @include respond(phone) {
         line-height: 2;
         margin-left: 2rem;
@@ -100,9 +104,6 @@
       }
       & > p {
         font-size: 1.6rem;
-        @include respond(big-desk) {
-          font-size: 2rem;
-        }
         @include respond(phone-small) {
           font-size: 1.4rem;
           margin-top: 1rem;
@@ -149,6 +150,9 @@
 .work__panel--project:hover figcaption {
   opacity: 1;
   transform: scale(1);
+  @include respond(big-desk) {
+    transform: scale(.6);
+  }
   @include respond(tab-land) {
     opacity: 0 !important;
   }

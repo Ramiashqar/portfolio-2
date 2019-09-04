@@ -9,6 +9,7 @@ require("./components/skills");
 require("./components/work");
 require("./components/menu");
 require("./components/utilities");
+require("./components/browserSupport");
 //3rd party libs
 // lazyloading + responsiveimages
 

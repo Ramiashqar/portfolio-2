@@ -68,12 +68,16 @@
   &__skill-4 {
     margin-top: 2rem;
     padding-top: 4rem;
+    @include respond(big-desk) {
+      padding-top: 2rem;
+    }
     &--items {
       position: relative;
       width: 50%;
       height: 30rem;
       margin: 0 auto;
       list-style: none;
+
       @include respond(phone) {
         width: 55%;
       }
