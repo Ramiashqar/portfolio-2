@@ -27,6 +27,27 @@
     display: block;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    &::before{
+      content: 'Not Ready Yet !!';
+      position: absolute;
+      background-color: $color-dark;
+      color: $color-white;
+      font-size: 2rem;
+      padding: 1rem;
+      top:30%;
+      left: 33%;
+      display: block;
+      opacity: 0;
+      @include respond(tab-land){
+        top: 15%;
+        left: 15%;
+      }
+      @include respond(tab-port) {
+        top:15%;
+        left: 20%;
+      }
+    }
     & > img {
       width: 5%;
       transition: all 0.3s ease-out;
@@ -94,5 +115,10 @@
     @include respond(phone) {
       font-size: 2.4rem;
     }
+  }
+}
+.footer__download:hover{
+  &::before{
+    opacity: 1;
   }
 }

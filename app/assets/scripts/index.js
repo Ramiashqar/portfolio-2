@@ -10,6 +10,10 @@ require("./components/work");
 require("./components/menu");
 require("./components/utilities");
 require("./components/browserSupport");
+
+const image1 = require("../images/pomodoro-mainX3.png"),
+  image2 = require("../images/cofee-love-mainX3.png"),
+  image3 = require("../images/portfolio-mainX3.png");
 //3rd party libs
 // lazyloading + responsiveimages
 
@@ -20,7 +24,6 @@ const scroll = new SmoothScroll("#down", {
 });
 
 //TODO:
-// [ ] add animations to other skills bars
-// [ ] add links to the social icons
+// []
 // FIXME:
 // []
