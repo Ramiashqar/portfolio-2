@@ -14,7 +14,8 @@ const path = require("path"),
   // compressionPlugin = require("compression-webpack-plugin"),
   // brotliPlugin = require("brotli-webpack-plugin"),
   CleanWebpackPlugin = require("clean-webpack-plugin"),
-  DelWebpackPlugin = require("del-webpack-plugin");
+  DelWebpackPlugin = require("del-webpack-plugin"),
+  CnameWebpackPlugin = require("cname-webpack-plugin");
 module.exports = env => {
   return {
     entry: {
@@ -24,7 +25,7 @@ module.exports = env => {
     mode: "production",
     output: {
       filename: "[name]-bundle.js",
-      path: path.resolve(__dirname, "../dist"),
+      path: path.resolve(__dirname, "../docs"),
       publicPath: ""
     },
     module: {
@@ -235,10 +236,10 @@ module.exports = env => {
         info: true,
         keepGeneratedAssets: true,
         allowExternal: true
-      })
-      // new CnameWebpackPlugin({
-      //   domain: "ramiashqar.tk",
-      // }),
+      }),
+      new CnameWebpackPlugin({
+        domain: "ramiashqar2020.tk",
+      }),
     ]
   };
 };
