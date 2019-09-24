@@ -67,7 +67,7 @@
   }
   &__skill-4 {
     margin-top: 2rem;
-    padding-top: 4rem;
+    padding: 4rem 0 6rem 0;
     @include respond(big-desk) {
       padding-top: 2rem;
     }
@@ -77,7 +77,6 @@
       height: 30rem;
       margin: 0 auto;
       list-style: none;
-
       @include respond(phone) {
         width: 55%;
       }
@@ -143,9 +142,9 @@
   }
   &__skill-5 {
     margin-top: 2.7rem;
-    padding: 3rem 0 0 0;
+    padding: 3rem 0 4rem 0;
     text-align: center;
-    @include respond(phone){
+    @include respond(phone) {
       padding: 1rem 0 0 0;
     }
     &--items {
@@ -155,9 +154,8 @@
       @include respond(big-desk) {
         line-height: 1.3;
       }
-      @include respond(phone){
+      @include respond(phone) {
         font-size: 1.5rem;
-        // line-height: 1.3;
       }
       & > li {
         text-align: center;
